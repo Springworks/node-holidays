@@ -36,3 +36,8 @@ Gets an array of all holidays for a given year.
 var 2014_holidays = holidays.getHolidays(2014);
 assert(2014_holidays.indexOf('2014-12-25') > -1);
 ```
+
+
+## sv-SE
+* [Lag (1989:253) om allmänna helgdagar](http://www.riksdagen.se/sv/Dokument-Lagar/Lagar/Svenskforfattningssamling/Lag-1989253-om-allmanna-hel_sfs-1989-253/)
+* [Helgdagar i Sverige](http://sv.wikipedia.org/wiki/Helgdagar_i_Sverige)
