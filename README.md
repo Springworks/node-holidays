@@ -18,6 +18,7 @@ if(holidays.isHoliday('2014-12-25')) {
 ```
 
 
+
 ## API
 
 ### `isHoliday(date)`
