@@ -22,5 +22,5 @@ function bootStrap(locale) {
     locale = 'en-US';
   }
   locale = locale.toLowerCase() + '.js';
-  return require(path.join(process.cwd(), 'lib', locale));
+  return require(path.join(__dirname, 'lib', locale));
 }
