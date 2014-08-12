@@ -10,7 +10,8 @@ A node module for managing local holidays.
 Example:
 
 ```js
-var holidays = require('node-holidays')('sv-SE'); // For swedish holidays.
+var Holidays = require('node-holidays'),
+    holidays = Holidays('sv-SE');
 
 if(holidays.isHoliday('2014-12-25')) {
   // The 25th of December is a holiday.
