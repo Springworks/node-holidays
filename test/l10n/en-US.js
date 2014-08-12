@@ -5,14 +5,9 @@
 
 // Module dependencies
 var should = require('should');
-var Holidays = require('../../index.js');
+var holidays = require('../../index.js')('en-US');
 
 describe('node-holidays/en-US.js', function() {
-  var holidays;
-
-  before(function() {
-    holidays = Holidays('');
-  });
 
   it('Should return an array with all the holidays for a given year.', function() {
     holidays.getHolidays().should.eql([]);

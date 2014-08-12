@@ -6,14 +6,9 @@
 // Module dependencies
 var should = require('should');
 var moment = require('moment');
-var Holidays = require('../../index.js');
+var holidays = require('../../index.js')('sv-SE');
 
 describe('node-holidays/sv-SE.js', function() {
-  var holidays;
-
-  before(function() {
-    holidays = Holidays('sv-SE');
-  });
 
   it('Should handle both strings and moment objects as input.', function() {
     var momentHolidayDate = moment('2014-12-26', 'YYYY-MM-DD'),
