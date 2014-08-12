@@ -5,7 +5,7 @@
 
 // Module dependencies
 var should = require('should');
-var holidays = require('../index.js')();
+var holidays = require('../../index.js')();
 
 describe('node-holidays/en-US.js', function() {
 
