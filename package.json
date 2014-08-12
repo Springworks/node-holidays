@@ -1,6 +1,6 @@
 {
   "name": "node-holidays",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utils to manage public holidays.",
   "main": "index.js",
   "scripts": {
