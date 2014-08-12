@@ -5,9 +5,25 @@
 
 // Module dependencies
 var should = require('should');
+var moment = require('moment');
 var holidays = require('../index.js')('sv-SE');
 
 describe('node-holidays/sv-SE.js', function() {
+
+  it('Should handle both strings and moment objects as input.', function() {
+    var momentHolidayDate = moment('2014-12-26', 'YYYY-MM-DD'),
+        momentNonHolidayDate = moment('2014-12-24', 'YYYY-MM-DD');
+
+    // isHoliday
+    holidays.isHoliday(momentHolidayDate).should.be.true;
+    holidays.isHoliday(momentNonHolidayDate).should.be.false;
+    holidays.isHoliday('2014-12-26').should.be.true;
+    holidays.isHoliday('2014-12-24').should.be.false;
+
+    // getHolidays
+    holidays.getHolidays(momentHolidayDate).should.be.an.Array;
+    holidays.getHolidays(2014).should.be.an.Array;
+  });
 
   it('Should return an array with all the holidays for a given year.', function() {
     var expected = {
