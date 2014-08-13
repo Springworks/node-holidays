@@ -6,7 +6,7 @@
 // Module dependencies
 var should = require('should');
 var moment = require('moment');
-var holidays = require('../index.js')('sv-SE');
+var holidays = require('../../index.js')('sv-SE');
 
 describe('node-holidays/sv-SE.js', function() {
 
