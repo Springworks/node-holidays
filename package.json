@@ -25,5 +25,5 @@
     "mocha-lcov-reporter": "0.0.1",
     "should": "~4.0.4"
   },
-  "license": "GPL v3"
+  "license": "Copyright Springworks"
 }
