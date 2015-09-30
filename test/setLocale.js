@@ -1,7 +1,7 @@
+'use strict';
 
-
-var should = require('should'),
-    Holidays = require('../index.js');
+var should = require('should');
+var Holidays = require('../index.js');
 
 describe('Holidays/locale', function() {
   var holidays;
@@ -31,13 +31,13 @@ describe('Holidays/locale', function() {
     holidays = Holidays('sv-SE');
     holidays_2014 = holidays.getHolidays(2014);
 
-    holidays_2014.should.be.an.Array;
+    holidays_2014.should.be.an.Array();
     holidays_2014.should.have.length(13);
 
     holidays.setLocale('en-US');
     holidays_2014 = holidays.getHolidays(2014);
 
-    holidays_2014.should.be.an.Array;
+    holidays_2014.should.be.an.Array();
     holidays_2014.should.have.length(0);
   });
 

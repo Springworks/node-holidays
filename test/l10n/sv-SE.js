@@ -1,9 +1,5 @@
-/**
- * Tests for the swedish localized version.
- */
+'use strict';
 
-
-// Module dependencies
 var should = require('should');
 var moment = require('moment');
 var holidays = require('../../index.js')('sv-SE');
@@ -15,14 +11,14 @@ describe('node-holidays/sv-SE.js', function() {
         momentNonHolidayDate = moment('2014-12-24', 'YYYY-MM-DD');
 
     // isHoliday
-    holidays.isHoliday(momentHolidayDate).should.be.true;
-    holidays.isHoliday(momentNonHolidayDate).should.be.false;
-    holidays.isHoliday('2014-12-26').should.be.true;
-    holidays.isHoliday('2014-12-24').should.be.false;
+    holidays.isHoliday(momentHolidayDate).should.be.true();
+    holidays.isHoliday(momentNonHolidayDate).should.be.false();
+    holidays.isHoliday('2014-12-26').should.be.true();
+    holidays.isHoliday('2014-12-24').should.be.false();
 
     // getHolidays
-    holidays.getHolidays(momentHolidayDate).should.be.an.Array;
-    holidays.getHolidays(2014).should.be.an.Array;
+    holidays.getHolidays(momentHolidayDate).should.be.an.Array();
+    holidays.getHolidays(2014).should.be.an.Array();
   });
 
   it('Should return an array with all the holidays for a given year.', function() {
@@ -47,34 +43,34 @@ describe('node-holidays/sv-SE.js', function() {
 
   it('Should be possible to check static date holidays', function() {
     // Nyårsdagen
-    holidays.isHoliday('2013-01-01').should.be.true;
-    holidays.isHoliday('2014-01-01').should.be.true;
-    holidays.isHoliday('2015-01-01').should.be.true;
+    holidays.isHoliday('2013-01-01').should.be.true();
+    holidays.isHoliday('2014-01-01').should.be.true();
+    holidays.isHoliday('2015-01-01').should.be.true();
 
     // Trettondedag jul
-    holidays.isHoliday('2013-01-06').should.be.true;
-    holidays.isHoliday('2014-01-06').should.be.true;
-    holidays.isHoliday('2015-01-06').should.be.true;
+    holidays.isHoliday('2013-01-06').should.be.true();
+    holidays.isHoliday('2014-01-06').should.be.true();
+    holidays.isHoliday('2015-01-06').should.be.true();
 
     // Första maj
-    holidays.isHoliday('2013-05-01').should.be.true;
-    holidays.isHoliday('2014-05-01').should.be.true;
-    holidays.isHoliday('2015-05-01').should.be.true;
+    holidays.isHoliday('2013-05-01').should.be.true();
+    holidays.isHoliday('2014-05-01').should.be.true();
+    holidays.isHoliday('2015-05-01').should.be.true();
 
     // Nationaldagen
-    holidays.isHoliday('2013-06-06').should.be.true;
-    holidays.isHoliday('2014-06-06').should.be.true;
-    holidays.isHoliday('2015-06-06').should.be.true;
+    holidays.isHoliday('2013-06-06').should.be.true();
+    holidays.isHoliday('2014-06-06').should.be.true();
+    holidays.isHoliday('2015-06-06').should.be.true();
 
     // Juldagen
-    holidays.isHoliday('2013-12-25').should.be.true;
-    holidays.isHoliday('2014-12-25').should.be.true;
-    holidays.isHoliday('2015-12-25').should.be.true;
+    holidays.isHoliday('2013-12-25').should.be.true();
+    holidays.isHoliday('2014-12-25').should.be.true();
+    holidays.isHoliday('2015-12-25').should.be.true();
 
     // Annandag jul
-    holidays.isHoliday('2013-12-26').should.be.true;
-    holidays.isHoliday('2014-12-26').should.be.true;
-    holidays.isHoliday('2015-12-26').should.be.true;
+    holidays.isHoliday('2013-12-26').should.be.true();
+    holidays.isHoliday('2014-12-26').should.be.true();
+    holidays.isHoliday('2015-12-26').should.be.true();
   });
 
   it('Should be possible to check if given date is good friday', function() {
@@ -87,7 +83,7 @@ describe('node-holidays/sv-SE.js', function() {
 
     // Check each date in the array.
     fixture.map(function(el, idx, arr) {
-      holidays.isHoliday(el).should.be.true;
+      holidays.isHoliday(el).should.be.true();
     });
   });
 
@@ -101,7 +97,7 @@ describe('node-holidays/sv-SE.js', function() {
 
     // Check each date in the array.
     fixture.map(function(el, idx, arr) {
-      holidays.isHoliday(el).should.be.true;
+      holidays.isHoliday(el).should.be.true();
     });
   });
 
@@ -116,7 +112,7 @@ describe('node-holidays/sv-SE.js', function() {
 
     // Check each date in the array.
     fixture.map(function(el, idx, arr) {
-      holidays.isHoliday(el).should.be.true;
+      holidays.isHoliday(el).should.be.true();
     });
   });
 
@@ -131,7 +127,7 @@ describe('node-holidays/sv-SE.js', function() {
 
     // Check each date in the array.
     fixture.map(function(el, idx, arr) {
-      holidays.isHoliday(el).should.be.true;
+      holidays.isHoliday(el).should.be.true();
     });
   });
 
@@ -146,7 +142,7 @@ describe('node-holidays/sv-SE.js', function() {
 
     // Check each date in the array.
     fixture.map(function(el, idx, arr) {
-      holidays.isHoliday(el).should.be.true;
+      holidays.isHoliday(el).should.be.true();
     });
   });
 
@@ -160,7 +156,7 @@ describe('node-holidays/sv-SE.js', function() {
 
     // Check each date in the array.
     fixture.map(function(el, idx, arr) {
-      holidays.isHoliday(el).should.be.true;
+      holidays.isHoliday(el).should.be.true();
     });
   });
 
@@ -174,7 +170,7 @@ describe('node-holidays/sv-SE.js', function() {
 
     // Check each date in the array.
     fixture.map(function(el, idx, arr) {
-      holidays.isHoliday(el).should.be.true;
+      holidays.isHoliday(el).should.be.true();
     });
   });
 
