@@ -1,13 +1,11 @@
+sudo: false
 language: node_js
-before_install:
-  - mkdir -p "$HOME"/.local/lib/python2.7/site-packages
-  - 'export PATH="$HOME/.local/bin:$PATH"'
-  - 'export PYTHONPATH="$HOME"/.local/lib/python2.7/site-packages:"$PYTHONPATH"'
-  - 'npm install && easy_install --prefix="$HOME"/.local http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz'
 node_js:
   - "0.10"
+  - "4"
 script:
-  - make lint
   - npm test
 after_success:
-  - NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+  - npm run coveralls
+notifications:
+  email: false

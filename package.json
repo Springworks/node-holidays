@@ -1,11 +1,11 @@
 {
-  "name": "node-holidays",
+  "name": "@springworks/holidays",
   "version": "0.2.0",
   "description": "Utils to manage public holidays.",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test istanbul cover --report teamcity --report lcov _mocha -- --ui bdd --check-leaks --slow 200 --recursive --reporter spec test",
-    "lint": "gjslint -r . --strict --max_line_length 100 -e \".idea, coverage, node_modules\""
+    "test": "NODE_ENV=test istanbul cover --report lcov _mocha -- --ui bdd --check-leaks --slow 20 --recursive --reporter spec test",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -16,14 +16,13 @@
     "url": "https://github.com/Springworks/node-holidays/issues"
   },
   "dependencies": {
-    "moment": "^2.8.1"
+    "moment": "2.10.6"
   },
   "devDependencies": {
-    "coveralls": "~2.10.0",
-    "istanbul": "~0.2.11",
-    "mocha": "~1.20.1",
-    "mocha-lcov-reporter": "0.0.1",
-    "should": "~4.0.4"
+    "coveralls": "2.11.4",
+    "istanbul": "0.3.21",
+    "mocha": "2.3.3",
+    "should": "7.1.0"
   },
   "license": "MIT"
 }

@@ -38,3 +38,5 @@ files-to-import/*
 old-files/*
 temp/*
 zip-files/*
+
+.idea

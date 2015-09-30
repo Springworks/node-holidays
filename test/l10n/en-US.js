@@ -1,9 +1,5 @@
-/**
- * Tests for the US localized version.
- */
+'use strict';
 
-
-// Module dependencies
 var should = require('should');
 var holidays = require('../../index.js')('en-US');
 
@@ -14,7 +10,7 @@ describe('node-holidays/en-US.js', function() {
   });
 
   it('Should be possible to check static date holidays', function() {
-    holidays.isHoliday('10/01/2014').should.be.false;
+    holidays.isHoliday('10/01/2014').should.be.false();
   });
 
 });
