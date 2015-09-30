@@ -1,5 +1,5 @@
 {
-  "name": "node-holidays",
+  "name": "@springworks/holidays",
   "version": "0.2.0",
   "description": "Utils to manage public holidays.",
   "main": "index.js",
