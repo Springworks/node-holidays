@@ -1,11 +1,13 @@
+sudo: false
 language: node_js
+node_js:
+  - "0.10"
+  - "4"
 before_install:
   - mkdir -p "$HOME"/.local/lib/python2.7/site-packages
   - 'export PATH="$HOME/.local/bin:$PATH"'
   - 'export PYTHONPATH="$HOME"/.local/lib/python2.7/site-packages:"$PYTHONPATH"'
   - 'npm install && easy_install --prefix="$HOME"/.local http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz'
-node_js:
-  - "0.10"
 script:
   - make lint
   - npm test
