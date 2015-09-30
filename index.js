@@ -1,13 +1,8 @@
-/**
- * Bootstrap for the Holidays module.
- */
+'use strict';
 
-
-// Module dependencies
 var path = require('path');
 
 
-/** @see bootStrap */
 module.exports = exports = Holidays;
 
 
@@ -75,5 +70,4 @@ Holidays.prototype.setLocale = function(locale) {
   Object.keys(holiday_functions).forEach(function(key) {
     this[key] = holiday_functions[key];
   }, this);
-
 };
