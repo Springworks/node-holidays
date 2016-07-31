@@ -16,7 +16,7 @@
     "url": "https://github.com/Springworks/node-holidays/issues"
   },
   "dependencies": {
-    "moment": "2.10.6"
+    "moment": "2.11.2"
   },
   "devDependencies": {
     "coveralls": "2.11.4",
