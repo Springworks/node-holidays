@@ -1,6 +1,8 @@
 node-holidays
 =============
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Springworks/node-holidays.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/Springworks/node-holidays.svg?branch=master)](https://travis-ci.org/Springworks/node-holidays)
 [![Coverage Status](https://coveralls.io/repos/Springworks/node-holidays/badge.png?branch=master)](https://coveralls.io/r/Springworks/node-holidays?branch=master)
 
